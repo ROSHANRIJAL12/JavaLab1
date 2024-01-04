@@ -1,0 +1,28 @@
+public class Divide {
+    public void divideNumbers(int numerator, int denominator) {
+        try {
+            int result = numerator / denominator;
+            System.out.println("The result of " + numerator + " / " + denominator + " is: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: " + e.getMessage() + ". Cannot divide by zero or perform invalid arithmetic operation.");
+        }
+    }
+
+    public static void main(String[] args) {
+       
+        Divide divisor = new Divide();
+
+        // Test case 1: Valid division
+        try {
+            divisor.divideNumbers(10, 2);
+        } catch (ArithmeticException e) {
+            System.out.println("An unexpected error occurred: " + e.getMessage());
+        }
+
+        try {
+            divisor.divideNumbers(5, 0);
+        } catch (ArithmeticException e) {
+            System.out.println("An unexpected error occurred: " + e.getMessage());
+        }
+    }
+}

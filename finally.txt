@@ -1,0 +1,16 @@
+public class FinallyExample {
+    public static void main(String[] args) {
+        try {
+            // Code that may throw an exception
+            System.out.println("Try block: Performing some operation");
+            int result = 10 / 2;
+            System.out.println("Result: " + result);
+        } finally {
+            // This block will be executed no matter what
+            // It's often used for cleanup activities or resource release
+            System.out.println("Finally block: Cleaning up resources");
+        }
+
+        System.out.println("After the try-finally block: Program continues");
+    }
+}
